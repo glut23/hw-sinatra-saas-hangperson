@@ -44,7 +44,7 @@ class HangpersonApp < Sinatra::Base
       flash[:message] = 'You have already used that letter.' if not valid
       flash[:security] = true
     rescue ArgumentError
-      flash[:message] = 'Please type a valid character.'
+      flash[:message] = 'Invalid guess.'
     end
     redirect '/show'
   end
